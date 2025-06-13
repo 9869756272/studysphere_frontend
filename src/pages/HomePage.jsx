@@ -78,6 +78,8 @@ const HomePage = () => {
           flexWrap: 'wrap',
           gap: '2rem'
         }}>
+
+          
           {courses.map((course, index) => (
             <div key={index} style={{
               backgroundColor: '#fff',
