@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate()
+  const handleLogin= () => {
+    navigate('/home')
+  }
+   
   return (
     <div className="flex h-screen">
       <div className="w-1/2 flex flex-col justify-center items-center bg-white">
@@ -10,7 +15,7 @@ export default function LoginPage() {
             <img
               src="/logo.png"
               alt="Study Sphere Logo"
-              className="w-49 h-49 mb-6" // 👈 Bigger logo
+              className="w-49 h-49 mb-6" 
             />
             <h1 className="text-2xl font-bold text-gray-800">Study Sphere</h1>
           </div>
@@ -28,7 +33,9 @@ export default function LoginPage() {
           <div className="text-right mb-3">
             <a href="#" className="text-sm text-red-500">Forgot Password?</a>
           </div>
-          <button className="w-full bg-teal-400 text-white py-2 rounded-md mb-4 hover:bg-teal-500">
+          <button className="w-full bg-teal-400 text-white py-2 rounded-md mb-4 hover:bg-teal-500"
+          onClick={handleLogin}
+          >
             Sign in
           </button>
           <p className="text-sm text-center">
